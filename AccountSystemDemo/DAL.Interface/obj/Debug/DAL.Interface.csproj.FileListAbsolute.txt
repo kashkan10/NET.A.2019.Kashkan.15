@@ -1,0 +1,16 @@
+C:\Users\MIB\Desktop\AccountSystemApplication\DAL.Interface\bin\Debug\DAL.Interface.dll
+C:\Users\MIB\Desktop\AccountSystemApplication\DAL.Interface\bin\Debug\DAL.Interface.pdb
+C:\Users\MIB\Desktop\AccountSystemApplication\DAL.Interface\obj\Debug\DAL.Interface.csproj.CoreCompileInputs.cache
+C:\Users\MIB\Desktop\AccountSystemApplication\DAL.Interface\obj\Debug\DAL.Interface.dll
+C:\Users\MIB\Desktop\AccountSystemApplication\DAL.Interface\obj\Debug\DAL.Interface.pdb
+C:\Users\MIB\Desktop\AccountSystemApplication\DAL.Interface\obj\Debug\DAL.Interface.csprojResolveAssemblyReference.cache
+C:\Users\Tanya\source\repos\AccountSystemDemo\AccountSystemDemo\DAL.Interface\bin\Debug\DAL.Interface.dll
+C:\Users\Tanya\source\repos\AccountSystemDemo\AccountSystemDemo\DAL.Interface\bin\Debug\DAL.Interface.pdb
+C:\Users\Tanya\source\repos\AccountSystemDemo\AccountSystemDemo\DAL.Interface\bin\Debug\AutoMapper.dll
+C:\Users\Tanya\source\repos\AccountSystemDemo\AccountSystemDemo\DAL.Interface\bin\Debug\AutoMapper.pdb
+C:\Users\Tanya\source\repos\AccountSystemDemo\AccountSystemDemo\DAL.Interface\bin\Debug\AutoMapper.xml
+C:\Users\Tanya\source\repos\AccountSystemDemo\AccountSystemDemo\DAL.Interface\obj\Debug\DAL.Interface.csprojAssemblyReference.cache
+C:\Users\Tanya\source\repos\AccountSystemDemo\AccountSystemDemo\DAL.Interface\obj\Debug\DAL.Interface.csproj.CoreCompileInputs.cache
+C:\Users\Tanya\source\repos\AccountSystemDemo\AccountSystemDemo\DAL.Interface\obj\Debug\DAL.Interface.csproj.CopyComplete
+C:\Users\Tanya\source\repos\AccountSystemDemo\AccountSystemDemo\DAL.Interface\obj\Debug\DAL.Interface.dll
+C:\Users\Tanya\source\repos\AccountSystemDemo\AccountSystemDemo\DAL.Interface\obj\Debug\DAL.Interface.pdb
