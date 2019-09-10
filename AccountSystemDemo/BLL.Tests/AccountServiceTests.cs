@@ -46,5 +46,31 @@ namespace BLL.Tests
             service.GetAllAccounts();
             repository.Verify(repo => repo.GetAllAccounts());
         }
+
+        [Test]
+        public void DepositAccTest()
+        {
+            var repository = new Mock<IRepository>();
+            var idGen = Mock.Of<IAccountNumberCreateService>();
+            var bonus = Mock.Of<IBonus>();
+
+            AccountService service = new AccountService(repository.Object, bonus);
+            service.CreateAccount("Don MOn", CardType.Base, idGen);
+            service.DepositAccount(idGen.GenerateId("Don MOn", CardType.Base), 100);
+            repository.Verify(repo => repo.UpdateAccount(It.IsAny<int>(), It.IsAny<AccountDTO>()));
+        }
+
+        [Test]
+        public void WithdrawAccTest()
+        {
+            var repository = new Mock<IRepository>();
+            var idGen = Mock.Of<IAccountNumberCreateService>();
+            var bonus = Mock.Of<IBonus>();
+
+            AccountService service = new AccountService(repository.Object, bonus);
+            service.CreateAccount("Don MOn", CardType.Base, idGen);
+            service.WithdrawAccount(idGen.GenerateId("Don MOn", CardType.Base), 100);
+            repository.Verify(repo => repo.UpdateAccount(It.IsAny<int>(), It.IsAny<AccountDTO>()));
+        }
     }
 }
