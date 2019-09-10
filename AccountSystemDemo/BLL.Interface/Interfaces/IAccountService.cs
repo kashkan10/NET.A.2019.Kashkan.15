@@ -7,6 +7,8 @@ namespace BLL.Interface.Interfaces
     {
         void CreateAccount(string owner, CardType type, IAccountNumberCreateService id);
 
+        void DeleteAccount(int id);
+
         void DepositAccount(int id, int sum);
 
         void WithdrawAccount(int id, int sum);

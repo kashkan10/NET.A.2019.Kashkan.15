@@ -13,3 +13,13 @@ C:\Users\Tanya\source\repos\AccountSystemDemo\AccountSystemDemo\BLL.Interface\ob
 C:\Users\Tanya\source\repos\AccountSystemDemo\AccountSystemDemo\BLL.Interface\obj\Debug\BLL.Interface.csproj.CopyComplete
 C:\Users\Tanya\source\repos\AccountSystemDemo\AccountSystemDemo\BLL.Interface\obj\Debug\BLL.Interface.dll
 C:\Users\Tanya\source\repos\AccountSystemDemo\AccountSystemDemo\BLL.Interface\obj\Debug\BLL.Interface.pdb
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\BLL.Interface\bin\Debug\BLL.Interface.dll
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\BLL.Interface\bin\Debug\BLL.Interface.pdb
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\BLL.Interface\bin\Debug\AutoMapper.dll
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\BLL.Interface\bin\Debug\AutoMapper.pdb
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\BLL.Interface\bin\Debug\AutoMapper.xml
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\BLL.Interface\obj\Debug\BLL.Interface.csprojAssemblyReference.cache
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\BLL.Interface\obj\Debug\BLL.Interface.csproj.CoreCompileInputs.cache
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\BLL.Interface\obj\Debug\BLL.Interface.csproj.CopyComplete
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\BLL.Interface\obj\Debug\BLL.Interface.dll
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\BLL.Interface\obj\Debug\BLL.Interface.pdb

@@ -4,6 +4,6 @@ namespace BLL.Interface.Interfaces
 {
     public interface IAccountNumberCreateService
     {
-        int GenerateId(string name, string lastname, CardType type);
+        int GenerateId(string owner, CardType type);
     }
 }

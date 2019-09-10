@@ -6,9 +6,9 @@ namespace BLL.ServiceImplementation
 {
     public class AccountNumberCreator : IAccountNumberCreateService
     {
-        public int GenerateId(string name, string lastname, CardType type)
+        public int GenerateId(string owner, CardType type)
         {
-            return Math.Abs((name + lastname + type.ToString()).GetHashCode());
+            return Math.Abs((owner + type.ToString()).GetHashCode());
         }
     }
 }

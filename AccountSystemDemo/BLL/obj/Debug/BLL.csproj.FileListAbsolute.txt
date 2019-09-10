@@ -22,3 +22,17 @@ C:\Users\Tanya\source\repos\AccountSystemDemo\AccountSystemDemo\BLL\bin\Debug\DA
 C:\Users\Tanya\source\repos\AccountSystemDemo\AccountSystemDemo\BLL\bin\Debug\AutoMapper.pdb
 C:\Users\Tanya\source\repos\AccountSystemDemo\AccountSystemDemo\BLL\bin\Debug\AutoMapper.xml
 C:\Users\Tanya\source\repos\AccountSystemDemo\AccountSystemDemo\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\BLL\bin\Debug\BLL.dll
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\BLL\bin\Debug\BLL.pdb
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\BLL\bin\Debug\AutoMapper.dll
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\BLL\bin\Debug\BLL.Interface.dll
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\BLL\bin\Debug\DAL.Interface.dll
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\BLL\bin\Debug\BLL.Interface.pdb
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\BLL\bin\Debug\DAL.Interface.pdb
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\BLL\bin\Debug\AutoMapper.pdb
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\BLL\bin\Debug\AutoMapper.xml
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\BLL\obj\Debug\BLL.dll
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\BLL\obj\Debug\BLL.pdb

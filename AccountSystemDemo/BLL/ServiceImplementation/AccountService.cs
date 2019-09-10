@@ -31,8 +31,18 @@ namespace BLL.ServiceImplementation
         public void CreateAccount(string owner, CardType type ,IAccountNumberCreateService id)
         {
             this.bonus = new BonusLogic();
-            Account acc = new Account(id.GenerateId(owner, owner, type), owner, type);
+            Account acc = new Account(id.GenerateId(owner, type), owner, type);
             repo.AddAccount(AccountMapper.mapper.Map<AccountDTO>(acc));
+        }
+
+        /// <summary>
+        /// Delete account
+        /// </summary>
+        /// <param name="id"></param>
+        public void DeleteAccount(int id)
+        {
+            Account acc = AccountMapper.mapper.Map<Account>(repo.GetAccount(id));
+            repo.RemoveAccount(AccountMapper.mapper.Map<AccountDTO>(acc));
         }
 
         /// <summary>
@@ -42,7 +52,6 @@ namespace BLL.ServiceImplementation
         /// <param name="sum"></param>
         public void DepositAccount(int id, int sum)
         {
-
             Account acc = AccountMapper.mapper.Map<Account>(repo.GetAccount(id));
             acc.AddSum(sum, bonus);
             repo.UpdateAccount(id, AccountMapper.mapper.Map<AccountDTO>(acc));
