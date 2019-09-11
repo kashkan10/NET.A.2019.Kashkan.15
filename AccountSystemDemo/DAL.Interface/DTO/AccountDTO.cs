@@ -4,31 +4,45 @@ namespace DAL.Interface.DTO
 {
     public class AccountDTO
     {
-        private int accountNumber;
-        private int balance;
+        private decimal balance;
 
         /// <summary>
         /// Default constructor
         /// </summary>
         public AccountDTO()
         {
-
         }
 
         /// <summary>
         /// Constructor
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="name"></param>
-        /// <param name="lastName"></param>
+        /// <param name="owner"></param>
+        /// <param name="balance"></param>
+        /// <param name="bonus"></param>
+        /// <param name="cardType"></param>
+        public AccountDTO(string id, string owner, decimal balance, int bonus, CardTypeDTO cardType)
+        {
+            AccountNumber = id;
+            Owner = owner;
+            Balance = balance;
+            Type = cardType;
+            Bonus = bonus;
+        }
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="owner"></param>
         /// <param name="balance"></param>
         /// <param name="cardType"></param>
         /// <param name="status"></param>
-        public AccountDTO(int id, string name, string lastName, int balance, CardTypeDTO cardType, StatusDTO status, double bonus)
+        /// <param name="bonus"
+        public AccountDTO(string id, string owner, decimal balance, CardTypeDTO cardType, StatusDTO status, int bonus)
         {
             AccountNumber = id;
-            Name = name;
-            LastName = lastName;
+            Owner = owner;
             Balance = balance;
             Type = cardType;
             Status = status;
@@ -38,43 +52,30 @@ namespace DAL.Interface.DTO
         /// <summary>
         /// AccountNumber property
         /// </summary>
-        public int AccountNumber
-        {
-            get
-            {
-                return accountNumber;
-            }
-            private set
-            {
-                if (value < 0)
-                    throw new Exception("Id cannot be negative");
-                accountNumber = value;
-            }
-        }
+        public string AccountNumber { get; private set; }
 
         /// <summary>
-        /// Name property
+        /// Owner property
         /// </summary>
-        public string Name { get; private set; }
-
-        /// <summary>
-        /// LastName property
-        /// </summary>
-        public string LastName { get; private set; }
+        public string Owner { get; private set; }
 
         /// <summary>
         /// Balance property
         /// </summary>
-        public int Balance
+        public decimal Balance
         {
             get
             {
                 return balance;
             }
+
             private set
             {
                 if (value < 0)
+                {
                     throw new Exception("Balance cannot be negative");
+                }
+
                 balance = value;
             }
         }
@@ -82,7 +83,7 @@ namespace DAL.Interface.DTO
         /// <summary>
         /// Bonus property
         /// </summary>
-        public double Bonus { get; private set; }
+        public int Bonus { get; private set; }
 
         /// <summary>
         /// Status property
@@ -122,7 +123,7 @@ namespace DAL.Interface.DTO
         /// <returns>integer number</returns>
         public override int GetHashCode()
         {
-            return (AccountNumber + Name + LastName).ToString().GetHashCode();
+            return (AccountNumber + Owner).ToString().GetHashCode();
         }
     }
 }

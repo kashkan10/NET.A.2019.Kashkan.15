@@ -18,3 +18,15 @@ C:\Users\Tanya\source\repos\AccountSystemDemo\AccountSystemDemo\DAL.Fake\obj\Deb
 C:\Users\Tanya\source\repos\AccountSystemDemo\AccountSystemDemo\DAL.Fake\obj\Debug\DAL.Fake.csproj.CopyComplete
 C:\Users\Tanya\source\repos\AccountSystemDemo\AccountSystemDemo\DAL.Fake\obj\Debug\DAL.Fake.dll
 C:\Users\Tanya\source\repos\AccountSystemDemo\AccountSystemDemo\DAL.Fake\obj\Debug\DAL.Fake.pdb
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL.Fake\bin\Debug\DAL.Fake.dll
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL.Fake\bin\Debug\DAL.Fake.pdb
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL.Fake\bin\Debug\AutoMapper.dll
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL.Fake\bin\Debug\DAL.Interface.dll
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL.Fake\bin\Debug\DAL.Interface.pdb
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL.Fake\bin\Debug\AutoMapper.pdb
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL.Fake\bin\Debug\AutoMapper.xml
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL.Fake\obj\Debug\DAL.Fake.csprojAssemblyReference.cache
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL.Fake\obj\Debug\DAL.Fake.csproj.CoreCompileInputs.cache
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL.Fake\obj\Debug\DAL.Fake.csproj.CopyComplete
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL.Fake\obj\Debug\DAL.Fake.dll
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL.Fake\obj\Debug\DAL.Fake.pdb

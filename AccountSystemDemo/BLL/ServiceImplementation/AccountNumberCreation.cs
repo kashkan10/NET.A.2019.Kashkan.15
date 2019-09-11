@@ -1,14 +1,12 @@
-﻿using System;
-using BLL.Interface.Interfaces;
-using BLL.Interface.Entities;
+﻿using BLL.Interface.Interfaces;
 
 namespace BLL.ServiceImplementation
 {
     public class AccountNumberCreator : IAccountNumberCreateService
     {
-        public int GenerateId(string owner, CardType type)
+        public string GenerateId(int id)
         {
-            return Math.Abs((owner + type.ToString()).GetHashCode());
+            return id.ToString();
         }
     }
 }

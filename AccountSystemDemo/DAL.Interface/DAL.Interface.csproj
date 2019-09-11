@@ -47,6 +47,7 @@
     <Compile Include="DTO\CardTypeDTO.cs" />
     <Compile Include="DTO\StatusDTO.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Interfaces\IStorage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

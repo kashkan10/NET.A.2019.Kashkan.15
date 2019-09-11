@@ -22,3 +22,17 @@ C:\Users\Tanya\source\repos\AccountSystemDemo\AccountSystemDemo\DAL\obj\Debug\DA
 C:\Users\Tanya\source\repos\AccountSystemDemo\AccountSystemDemo\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\Tanya\source\repos\AccountSystemDemo\AccountSystemDemo\DAL\obj\Debug\DAL.dll
 C:\Users\Tanya\source\repos\AccountSystemDemo\AccountSystemDemo\DAL\obj\Debug\DAL.pdb
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL\bin\Debug\DAL.dll
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL\bin\Debug\DAL.pdb
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL\bin\Debug\AutoMapper.dll
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL\bin\Debug\DAL.Interface.dll
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL\bin\Debug\System.ValueTuple.dll
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL\bin\Debug\DAL.Interface.pdb
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL\bin\Debug\AutoMapper.pdb
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL\bin\Debug\AutoMapper.xml
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL\bin\Debug\System.ValueTuple.xml
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL\obj\Debug\DAL.dll
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL\obj\Debug\DAL.pdb

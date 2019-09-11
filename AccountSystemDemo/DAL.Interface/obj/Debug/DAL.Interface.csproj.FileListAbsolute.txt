@@ -14,3 +14,13 @@ C:\Users\Tanya\source\repos\AccountSystemDemo\AccountSystemDemo\DAL.Interface\ob
 C:\Users\Tanya\source\repos\AccountSystemDemo\AccountSystemDemo\DAL.Interface\obj\Debug\DAL.Interface.csproj.CopyComplete
 C:\Users\Tanya\source\repos\AccountSystemDemo\AccountSystemDemo\DAL.Interface\obj\Debug\DAL.Interface.dll
 C:\Users\Tanya\source\repos\AccountSystemDemo\AccountSystemDemo\DAL.Interface\obj\Debug\DAL.Interface.pdb
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL.Interface\bin\Debug\DAL.Interface.dll
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL.Interface\bin\Debug\DAL.Interface.pdb
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL.Interface\bin\Debug\AutoMapper.dll
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL.Interface\bin\Debug\AutoMapper.pdb
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL.Interface\bin\Debug\AutoMapper.xml
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL.Interface\obj\Debug\DAL.Interface.csprojAssemblyReference.cache
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL.Interface\obj\Debug\DAL.Interface.csproj.CoreCompileInputs.cache
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL.Interface\obj\Debug\DAL.Interface.csproj.CopyComplete
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL.Interface\obj\Debug\DAL.Interface.dll
+C:\Users\Tanya\Documents\GitHub\NET.A.2019.Kashkan.15\AccountSystemDemo\DAL.Interface\obj\Debug\DAL.Interface.pdb

@@ -1,5 +1,5 @@
-﻿using BLL.Interface.Interfaces;
-using BLL.Interface.Entities;
+﻿using BLL.Interface.Entities;
+using BLL.Interface.Interfaces;
 
 namespace BLL.ServiceImplementation
 {
@@ -11,9 +11,9 @@ namespace BLL.ServiceImplementation
         /// <param name="sum"></param>
         /// <param name="type"></param>
         /// <returns>Sum to add</returns>
-        public double Add(int sum, CardType type)
+        public int Deposit(decimal sum, CardType type)
         {
-            return sum * (int)type / 100;
+            return (int)sum * (int)type / 100;
         }
 
         /// <summary>
@@ -22,9 +22,9 @@ namespace BLL.ServiceImplementation
         /// <param name="sum"></param>
         /// <param name="type"></param>
         /// <returns>Sum to withdraw</returns>
-        public double Withdraw(int sum, CardType type)
+        public int Withdraw(decimal sum, CardType type)
         {
-            return sum * (int)type / 200;
+            return (int)sum * (int)type / 200;
         }
     }
 }

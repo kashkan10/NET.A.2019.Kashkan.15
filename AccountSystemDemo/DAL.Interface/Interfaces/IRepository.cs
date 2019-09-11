@@ -5,17 +5,11 @@ namespace DAL.Interface.Interfaces
 {
     public interface IRepository
     {
-        void AddAccount(AccountDTO account);
+        void Create(AccountDTO account);
 
-        void RemoveAccount(AccountDTO account);
+        void Update(AccountDTO account);
 
-        void UpdateAccount(int id, AccountDTO account);
-
-        void SaveToStorage();
-
-        void LoadFromStorage();
-
-        AccountDTO GetAccount(int id);
+        AccountDTO GetByNumber(string id);
 
         IEnumerable<AccountDTO> GetAllAccounts();
     }

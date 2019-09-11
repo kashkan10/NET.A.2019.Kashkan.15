@@ -5,27 +5,30 @@ namespace BLL.Interface.Entities
 {
     public class Account
     {
-        private int accountNumber;
-        private int balance;
+        private decimal balance;
 
-
-        public Account() { }
+        /// <summary>
+        /// Default constructor
+        /// </summary>
+        public Account()
+        {
+        }
 
         /// <summary>
         /// Constructor
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="name"></param>
-        /// <param name="lastName"></param>
+        /// <param name="owner"></param>
         /// <param name="balance"></param>
-        /// <param name="cardType"></param>
-        public Account(int id, string owner, int balance, CardType cardType, double bonus)
+        /// <param name="type"></param>
+        /// <param name="bonus"></param>
+        public Account(string id, string owner, decimal balance, CardType type, int bonus)
         {
             AccountNumber = id;
             Owner = owner;
             Balance = balance;
-            Type = cardType;
             Bonus = bonus;
+            Type = type;
             Status = Status.Active;
         }
 
@@ -33,53 +36,55 @@ namespace BLL.Interface.Entities
         /// Constructor
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="name"></param>
-        /// <param name="lastName"></param>
+        /// <param name="owner"></param>
         /// <param name="balance"></param>
-        /// <param name="cardType"></param>
-        public Account(int id, string owner, CardType cardType)
+        /// <param name="type"></param>
+        public Account(string id, string owner, decimal balance, CardType type)
         {
             AccountNumber = id;
             Owner = owner;
-            Type = cardType;
             Status = Status.Active;
+            Type = type;
+        }
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="owner"></param>
+        /// <param name="type"></param>
+        public Account(string id, string owner, CardType type)
+        {
+            AccountNumber = id;
+            Owner = owner;
+            Status = Status.Active;
+            Type = type;
         }
 
         /// <summary>
         /// Id property
         /// </summary>
-        public int AccountNumber
-        {
-            get
-            {
-                return accountNumber;
-            }
-            private set
-            {
-                if (value < 0)
-                {
-                    throw new Exception("Id cannot be negative");
-                }
-
-                accountNumber = value;
-            }
-        }
+        public string AccountNumber { get; private set; }
 
         /// <summary>
         /// Owner property
         /// </summary>
         public string Owner { get; private set; }
 
-        public int Balance
+        public decimal Balance
         {
             get
             {
                 return balance;
             }
+
             private set
             {
                 if (value < 0)
+                {
                     throw new Exception("Balance cannot be negative");
+                }
+
                 balance = value;
             }
         }
@@ -87,7 +92,7 @@ namespace BLL.Interface.Entities
         /// <summary>
         /// Bonus property
         /// </summary>
-        public double Bonus { get; private set; }
+        public int Bonus { get; private set; }
 
         /// <summary>
         /// Status property
@@ -102,33 +107,53 @@ namespace BLL.Interface.Entities
         /// <summary>
         /// IsActive property
         /// </summary>
-        bool IsActive { get { if (Status == Status.Active) return true; else return false; } }
+        private bool IsActive
+        {
+            get
+            {
+                if (Status == Status.Active)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
 
         /// <summary>
         /// Add sum to account
         /// </summary>
         /// <param name="sum"></param>
-        public void AddSum(int sum, IBonus bonusLogic)
+        public void Deposit(decimal sum, IBonus bonusLogic)
         {
             if (sum < 0)
+            {
                 throw new ArgumentException("Sum cannot be negative");
+            }
 
             if (IsActive)
             {
                 Balance += sum;
-                bonusLogic.Add(sum, Type);
+                Bonus += bonusLogic.Deposit(sum, Type);
             }
-            else throw new Exception("Account closed");
+            else
+            {
+                throw new Exception("Account closed");
+            }
         }
 
         /// <summary>
         /// Withdraw sum from account
         /// </summary>
         /// <param name="sum"></param>
-        public void WithdrawSum(int sum, IBonus bonusLogic)
+        public void Withdraw(decimal sum, IBonus bonusLogic)
         {
             if (sum < 0)
+            {
                 throw new ArgumentException("Sum cannot be negative");
+            }
 
             if (IsActive)
             {
@@ -137,7 +162,10 @@ namespace BLL.Interface.Entities
                     Balance -= sum;
                     Bonus = bonusLogic.Withdraw(sum, Type) < Bonus ? Bonus - bonusLogic.Withdraw(sum, Type) : 0;
                 }
-                else throw new Exception("Account closed");
+                else
+                {
+                    throw new Exception("Account closed");
+                }
             }
         }
 
@@ -156,8 +184,7 @@ namespace BLL.Interface.Entities
         /// <returns>String representation</returns>
         public override string ToString()
         {
-            return string.Format($"{AccountNumber},{Owner}, {Balance}, {Type}");
+            return string.Format($"{AccountNumber}.{Owner}, {Balance}, {Type}");
         }
     }
 }
-

@@ -7,26 +7,25 @@ using Ninject;
 
 namespace ConsolePL
 {
-    class Program
+    internal class Program
     {
-        private static readonly IKernel resolver;
+        private static readonly IKernel Resolver;
 
         static Program()
         {
-            resolver = new StandardKernel();
-            resolver.ConfigurateResolver();
+            Resolver = new StandardKernel();
+            Resolver.ConfigurateResolver();
         }
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            IAccountService service = resolver.Get<IAccountService>();
-            IAccountNumberCreateService creator = resolver.Get<IAccountNumberCreateService>();
+            IAccountService service = Resolver.Get<IAccountService>();
+            IAccountNumberCreateService creator = Resolver.Get<IAccountNumberCreateService>();
 
-            service.CreateAccount("Don Milon", CardType.Base, creator);
-            service.CreateAccount("Ken Down", CardType.Base, creator);
-            service.CreateAccount("Lick Shane", CardType.Gold, creator);
-            service.CreateAccount("Rita McGrey", CardType.Base, creator);
-
+            service.OpenAccount("Don Milon", CardType.Base, creator);
+            service.OpenAccount("Ken Down", CardType.Base, creator);
+            service.OpenAccount("Lick Shane", CardType.Gold, creator);
+            service.OpenAccount("Rita McGrey", CardType.Base, creator);
 
             var creditNumbers = service.GetAllAccounts().Select(acc => acc.AccountNumber).ToArray();
 

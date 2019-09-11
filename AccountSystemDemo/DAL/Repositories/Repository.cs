@@ -1,22 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using DAL.Interface.Interfaces;
 using DAL.Interface.DTO;
-using System.IO;
+using DAL.Interface.Interfaces;
 
 namespace DAL.Repositories
 {
     public class Repository : IRepository
     {
-        List<AccountDTO> list;
-        string Path;
+        private List<AccountDTO> list;
+        private string filePath;
 
         /// <summary>
         /// Default constructor
         /// </summary>
         public Repository()
         {
-            Path = "accounts.dat";
+            filePath = "accounts.dat";
             list = new List<AccountDTO>();
         }
 
@@ -26,7 +25,7 @@ namespace DAL.Repositories
         /// <param name="path"></param>
         public Repository(string path)
         {
-            Path = path;
+            filePath = path;
             list = new List<AccountDTO>();
         }
 
@@ -34,8 +33,13 @@ namespace DAL.Repositories
         /// Add account to list
         /// </summary>
         /// <param name="account"></param>
-        public void AddAccount(AccountDTO account)
+        public void Create(AccountDTO account)
         {
+            if (account == null)
+            {
+                throw new ArgumentNullException();
+            }
+
             if (list.Contains(account))
             {
                 throw new Exception("Account is already exist");
@@ -49,7 +53,7 @@ namespace DAL.Repositories
         /// </summary>
         /// <param name="id"></param>
         /// <returns>Account</returns>
-        public AccountDTO GetAccount(int id)
+        public AccountDTO GetByNumber(string id)
         {
             if (list.Contains(list.Find(acc => acc.AccountNumber == id)))
             {
@@ -62,69 +66,41 @@ namespace DAL.Repositories
         }
 
         /// <summary>
-        /// Remove account from list
+        /// Update account
         /// </summary>
         /// <param name="account"></param>
-        public void RemoveAccount(AccountDTO account)
+        public void Update(AccountDTO account)
         {
+            if (account == null)
+            {
+                throw new ArgumentNullException();
+            }
+
             if (!list.Contains(account))
             {
                 throw new Exception("Account not found");
             }
 
-            list.Remove(account);
-        }
-
-        /// <summary>
-        /// Update account
-        /// </summary>
-        /// <param name="account"></param>
-        /// <param name="id"></param>
-        public void UpdateAccount(int id, AccountDTO account)
-        {
-            if (!list.Contains(list.Find(acc => acc.AccountNumber == id)))
-            {
-                throw new Exception("Account not found");
-            }
-
-            RemoveAccount(list.Find(accc => accc.AccountNumber == id));
+            list.Remove(list.Find(acc => acc.AccountNumber == account.AccountNumber));
             list.Add(account);
         }
 
-        public void SaveToStorage()
+        /// <summary>
+        /// Save list to storage
+        /// </summary>
+        /// <param name="storage"></param>
+        public void SaveToStorage(IStorage<AccountDTO> storage)
         {
-            using (BinaryWriter writer = new BinaryWriter(File.Open(Path, FileMode.OpenOrCreate)))
-            {
-                foreach (AccountDTO s in list)
-                {
-                    writer.Write(s.AccountNumber);
-                    writer.Write(s.Name);
-                    writer.Write(s.LastName);
-                    writer.Write(s.Balance);
-                    writer.Write((int)s.Type);
-                    writer.Write((int)s.Status);
-                    writer.Write(s.Bonus);
-                }
-            }
+            storage.SaveToStorage(list, filePath);
         }
 
-        public void LoadFromStorage()
+        /// <summary>
+        /// Load list from storage
+        /// </summary>
+        /// <param name="storage"></param>
+        public void LoadFromStorage(IStorage<AccountDTO> storage)
         {
-            using (BinaryReader reader = new BinaryReader(File.Open(Path, FileMode.Open)))
-            {
-                while (reader.PeekChar() > -1)
-                {
-                    int id = reader.ReadInt32();
-                    string name = reader.ReadString();
-                    string lastName = reader.ReadString();
-                    int balance = reader.ReadInt32();
-                    CardTypeDTO type = (CardTypeDTO)reader.ReadInt32();
-                    StatusDTO status = (StatusDTO)reader.ReadInt32();
-                    double bonus = reader.ReadDouble();
-
-                    list.Add(new AccountDTO(id, name, lastName, balance, type, status, bonus));
-                }
-            }
+            storage.LoadFromStorage(list, filePath);
         }
 
         /// <summary>

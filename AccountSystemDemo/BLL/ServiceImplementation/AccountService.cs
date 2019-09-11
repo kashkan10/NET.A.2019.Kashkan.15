@@ -1,21 +1,21 @@
 ﻿using System.Collections.Generic;
-using BLL.Interface.Interfaces;
+using System.Linq;
 using BLL.Interface.Entities;
-using DAL.Interface.Interfaces;
+using BLL.Interface.Interfaces;
 using BLL.Mappers;
 using DAL.Interface.DTO;
+using DAL.Interface.Interfaces;
 
 namespace BLL.ServiceImplementation
 {
     public class AccountService : IAccountService
     {
+        private readonly IBonus bonus;
         private IRepository repo;
-        private IBonus bonus;
 
         /// <summary>
         /// Custom constructor
         /// </summary>
-        /// <param name="idCreate"></param>
         /// <param name="bonus"></param>
         /// <param name="repo"></param>
         public AccountService(IRepository repo, IBonus bonus)
@@ -28,21 +28,10 @@ namespace BLL.ServiceImplementation
         /// Create new account 
         /// </summary>
         /// <param name="account"></param>
-        public void CreateAccount(string owner, CardType type ,IAccountNumberCreateService id)
+        public void OpenAccount(string owner, CardType type, IAccountNumberCreateService id)
         {
-            this.bonus = new BonusLogic();
-            Account acc = new Account(id.GenerateId(owner, type), owner, type);
-            repo.AddAccount(AccountMapper.mapper.Map<AccountDTO>(acc));
-        }
-
-        /// <summary>
-        /// Delete account
-        /// </summary>
-        /// <param name="id"></param>
-        public void DeleteAccount(int id)
-        {
-            Account acc = AccountMapper.mapper.Map<Account>(repo.GetAccount(id));
-            repo.RemoveAccount(AccountMapper.mapper.Map<AccountDTO>(acc));
+            Account acc = new Account(id.GenerateId(GetNumberOfAccounts() + 1), owner, type);
+            repo.Create(AccountMapper.Mapper.Map<AccountDTO>(acc));
         }
 
         /// <summary>
@@ -50,11 +39,11 @@ namespace BLL.ServiceImplementation
         /// </summary>
         /// <param name="id"></param>
         /// <param name="sum"></param>
-        public void DepositAccount(int id, int sum)
+        public void DepositAccount(string id, decimal sum)
         {
-            Account acc = AccountMapper.mapper.Map<Account>(repo.GetAccount(id));
-            acc.AddSum(sum, bonus);
-            repo.UpdateAccount(id, AccountMapper.mapper.Map<AccountDTO>(acc));
+            Account acc = AccountMapper.Mapper.Map<Account>(repo.GetByNumber(id));
+            acc.Deposit(sum, bonus);
+            repo.Update(AccountMapper.Mapper.Map<AccountDTO>(acc));
         }
 
         /// <summary>
@@ -62,40 +51,29 @@ namespace BLL.ServiceImplementation
         /// </summary>
         /// <param name="id"></param>
         /// <param name="sum"></param>
-        public void WithdrawAccount(int id, int sum)
+        public void WithdrawAccount(string id, decimal sum)
         {
-            Account acc = AccountMapper.mapper.Map<Account>(repo.GetAccount(id));
-            acc.WithdrawSum(sum, bonus);
-            repo.UpdateAccount(id, AccountMapper.mapper.Map<AccountDTO>(acc));
+            Account acc = AccountMapper.Mapper.Map<Account>(repo.GetByNumber(id));
+            acc.Withdraw(sum, bonus);
+            repo.Update(AccountMapper.Mapper.Map<AccountDTO>(acc));
         }
 
         /// <summary>
-        /// Close account
+        /// Get list of accounts
         /// </summary>
-        /// <param name="id"></param>
-        public void CloseAcc(int id)
-        {
-            Account acc = AccountMapper.mapper.Map<Account>(repo.GetAccount(id));
-            acc.Close();
-            repo.UpdateAccount(id, AccountMapper.mapper.Map<AccountDTO>(acc));
-        }
-
-        /// <summary>
-        /// Write list to storage
-        /// </summary>
-        /// <param name="storage"></param>
-        public void SaveToStorage()
-        {
-            repo.SaveToStorage();
-        }
-
-        /// <summary>
-        /// Load List from storage
-        /// </summary>
-        /// <param name="storage"></param>
+        /// <returns>list</returns>
         public IEnumerable<Account> GetAllAccounts()
         {
-            return AccountMapper.mapper.Map<IEnumerable<Account>>(repo.GetAllAccounts());
+            return AccountMapper.Mapper.Map<IEnumerable<Account>>(repo.GetAllAccounts());
+        }
+
+        /// <summary>
+        /// Get number of accounts
+        /// </summary>
+        /// <returns>result</returns>
+        private int GetNumberOfAccounts()
+        {
+            return repo.GetAllAccounts().Count();
         }
     }
 }
