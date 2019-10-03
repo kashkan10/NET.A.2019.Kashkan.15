@@ -164,8 +164,12 @@ namespace BLL.Interface.Entities
                 }
                 else
                 {
-                    throw new Exception("Account closed");
+                    throw new Exception("Not enough money");
                 }
+            }
+            else
+            {
+                throw new Exception("Account closed");
             }
         }
 
